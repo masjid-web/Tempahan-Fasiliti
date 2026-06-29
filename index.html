@@ -93,7 +93,7 @@
             <button class="butang-tab" onclick="tukarKampus('pekan', this)">Masjid Kampus Pekan</button>
         </div>
         
-        <div id="kampus-gambang" class="kandungan-kampus aktif">
+        <div id="kampus-gambang"class="kandungan-kampus aktif">
             <h2 class="seksyen-tajuk">Fasiliti Masjid Kampus Gambang</h2>
             <div class="grid-produk">
                 <div class="kad-produk"><img src="https://picsum.photos/300/200?random=1"><h3>Bilik Mesyuarat</h3><p>Kapasiti 15 orang</p><p class="harga">RM 50.00</p></div>
@@ -196,7 +196,7 @@
             document.querySelectorAll('.butang-tab').forEach(el => el.classList.remove('aktif'));
             
             element.classList.add('aktif');
-            document.getElementById('kampus-' +kampus).classList.add('aktif');
+            document.getElementById('kampus-'+kampus).classList.add('aktif');
             
             const selectProduk = document.getElementById('produk');
             selectProduk.innerHTML = ""; // Kosongkan pilihan lama
