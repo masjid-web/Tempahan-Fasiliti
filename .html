@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Tempahan Masjid UMPSA</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f8f9fa; color: #333; margin: 0; padding: 0; }
+        header { background-color: #0f2027; color: #fff; text-align: center; padding: 60px 20px; }
+        header h1 { margin: 0; font-size: 2.5rem; color: #f8b500; }
+        header p { font-size: 1.1rem; opacity: 0.8; }
+        .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+        
+        /* KOTAK PENGUMUMAN */
+        .kotak-pengumuman {
+            background-color: #fff3cd;
+            border-left: 5px solid #f8b500;
+            color: #856404;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .kotak-pengumuman h3 { margin: 0 0 10px 0; display: flex; align-items: center; gap: 10px; color: #0f2027; }
+        .kotak-pengumuman p { margin: 0; line-height: 1.5; font-size: 0.95rem; }
+
+        .seksyen-tajuk { text-align: center; margin-bottom: 30px; color: #0f2027; }
+        
+        /* GRID LAYOUT UNTUK 8 FASILITI */
+        .grid-produk { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+            margin-bottom: 50px; 
+        }
+        .kad-produk { background: white; border-radius: 8px; text-align: center; padding: 20px; border-top: 4px solid #f8b500; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .kad-produk img { width: 100%; height: 180px; object-fit: cover; border-radius: 5px; }
+        .harga { font-weight: bold; color: #e67e22; font-size: 1.2rem; }
+        
+        .bahagian-borang { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); max-width: 600px; margin: 0 auto 50px auto; }
+        .input-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, textarea, select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background-color: #25D366; color: white; border: none; border-radius: 5px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        button:hover { background-color: #128C7E; }
+        button:disabled { background-color: #ccc; cursor: not-allowed; }
+        footer { background-color: #0f2027; color: white; text-align: center; padding: 20px; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MASJID UMPSA KAMPUS GAMBANG</h1>
+        <p>Sistem Tempahan Fasiliti & Kemudahan di Masjid</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="kotak-pengumuman">
+            <h3>📢 PENTING!</h3>
+            <p>Setiap tempahan perlulah dimohon sekurang-kurangnya 3 hari sebelum tarikh penggunaan. <strong>Hanya fasiliti & kemudahan yang disenaraikan di bawah sahaja boleh ditempah.</strong></p>
+        </div>
+        
+        <h2 class="seksyen-tajuk">Fasiliti & Kemudahan</h2>
+        
+        <div class="grid-produk">
+            <div class="kad-produk">
+                <img src="https://picsum.photos/300/200?random=1" alt="Bilik Mesyuarat">
+                <h3>Bilik Mesyuarat</h3>
+                <p>Kapasiti 15 orang</p>
+                <p class="harga">RM 50.00</p>
+            </div>
+            
+            <div class="kad-produk">
+                <img src="https://picsum.photos/300/200?random=2" alt="Bilik Latihan">
+                <h3>Bilik Latihan (Atas)</h3>
+                <p>Kapasiti 20 orang</p>
+                <p class="harga">RM 85.00</p>
+            </div>
+            
+            <div class="kad-produk">
+                <img src="https://picsum.photos/300/200?random=3" alt="Ruang Solat Utama">
+                <h3>Ruang Solat Utama</h3>
+                <p>Kapasiti 3000 orang</p>
+                <p class="harga">RM 120.00</p>
+            </div>
+
+            <div class="kad-produk">
+                <img src="https://picsum.photos/300/200?random=4" alt="Ruang Solat Wanita">
+                <h3>Ruang Solat Wanita (Atas)</h3>
+                <p>Kapasiti 200 orang</p>
+                <p class="harga">RM 150.00</p>
+            </div>
+
+            <div class="kad-produk">
+                <img src="https://picsum.photos/300/200?random=5" alt="Ruang Legar A">
+                <h3>Ruang Legar Masjid A (Kiri)</h3>
+                <p>Kapasiti 300 orang</p>
+                <p class="harga">RM 40.00</p>
+            </div>
+
+            <div class="kad-produk">
+                <img src="https://picsum.photos/300/200?random=6" alt="Ruang Legar B">
+                <h3>Ruang Legar B (Kanan)</h3>
+                <p>Kapasiti 50 orang</p>
+                <p class="harga">RM 199.00</p>
+            </div>
+
+            <div class="kad-produk">
+                <img src="https://picsum.photos/300/200?random=7" alt="Bilik Jenazah">
+                <h3>Bilik Jenazah</h3>
+                <p>Kapasiti 5 orang</p>
+                <p class="harga">RM 25.00</p>
+            </div>
+
+            <div class="kad-produk">
+                <img src="https://picsum.photos/300/200?random=8" alt="Dapur Masjid">
+                <h3>Dapur Masjid</h3>
+                <p>Kapasiti 15 orang</p>
+                <p class="harga">RM 25.00</p>
+            </div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #ddd; margin: 40px 0;">
+
+        <div class="bahagian-borang">
+            <h2 style="text-align: center; margin-top: 0; color: #0f2027;">Borang Permohonan Tempahan</h2>
+            <p style="text-align: center; color: #666;">Isi borang untuk rekod dan hantar pengesahan ke WhatsApp Masjid.</p>
+            
+            <form onsubmit="prosesBorang(event)">
+                <div class="input-group">
+                    <label for="nama">Nama Penuh:</label>
+                    <input type="text" id="nama" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="telefon">Nombor Telefon:</label>
+                    <input type="tel" id="telefon" placeholder="Contoh: 0123456789" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="kategori">Kategori Pemohon:</label>
+                    <select id="kategori" required>
+                        <option value="Staf">Staf UMPSA</option>
+                        <option value="Pelajar">Pelajar UMPSA</option>
+                        <option value="Awam">Orang Awam / Luar</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Alamat Emel:</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="produk">Pilih Fasiliti / Kemudahan:</label>
+                    <select id="produk">
+                        <option value="Bilik Mesyuarat">Bilik Mesyuarat</option>
+                        <option value="Bilik Latihan (Atas)">Bilik Latihan (Atas)</option>
+                        <option value="Ruang Solat Utama">Ruang Solat Utama</option>
+                        <option value="Ruang Solat Wanita (Atas)">Ruang Solat Wanita (Atas)</option>
+                        <option value="Ruang Legar Masjid A (Kiri)">Ruang Legar Masjid A (Kiri)</option>
+                        <option value="Ruang Legar B (Kanan)">Ruang Legar B (Kanan)</option>
+                        <option value="Bilik Jenazah">Bilik Jenazah</option>
+                        <option value="Dapur Masjid">Dapur Masjid</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="mesej">Butiran Penggunaan (Tarikh, Masa & Tujuan):</label>
+                    <textarea id="mesej" rows="4" placeholder="Contoh: 12 Mac 2026, 9 pagi - 1 tengahari. Tujuan: Mesyuarat Kelab." required></textarea>
+                </div>
+                
+                <button type="submit" id="butangHantar">Sila Tunggu & Hantar Permohonan ke WhatsApp...</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Masjid UMPSA Kampus Gambang. Hak Cipta Terpelihara.</p>
+    </footer>
+
+    <script>
+        async function prosesBorang(event) {
+            event.preventDefault();
+            
+            const butang = document.getElementById('butangHantar');
+            butang.disabled = true;
+            butang.innerText = "Menyimpan Rekod...";
+
+            // !!! 1. MASUKKAN NOMBOR WHATSAPP PENGURUSAN MASJID DI SINI (cth: 60123456789) !!!
+            const nomborTelefon = "0189034955"; 
+
+            // !!! 2. TAMPAL URL WEB APP GOOGLE SCRIPT ANDA DI SINI !!!
+            const googleScriptUrl = "https://script.google.com/macros/s/AKfycbwswgsMH1Jf-vTaqwD2zXjNgvK7NsTxAdfulVIo9ULlWVCe6F6IemKdyy316qherbDrgw/exec";
+
+            const dataBorang = {
+                nama: document.getElementById('nama').value,
+                telefon: document.getElementById('telefon').value,
+                kategori: document.getElementById('kategori').value,
+                email: document.getElementById('email').value,
+                produk: document.getElementById('produk').value, // Ini akan menghantar nama fasiliti ke Sheet
+                mesej: document.getElementById('mesej').value
+            };
+
+            try {
+                await fetch(googleScriptUrl, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(dataBorang)
+                });
+            } catch (error) {
+                console.error("Gagal simpan ke Sheets:", error);
+            }
+
+            // DIKEMASKINI: Format ayat WhatsApp yang lebih rasmi untuk permohonan masjid
+            const teksMesej = `Salam, saya ingin membuat permohonan tempahan fasiliti Masjid UMPSA.%0A%0A` +
+                              `*Nama Pemohon:* ${dataBorang.nama}%0A` +
+                              `*No. Telefon:* ${dataBorang.telefon}%0A` +
+                              `*Kategori:* ${dataBorang.kategori}%0A` +
+                              `*Emel:* ${dataBorang.email}%0A` +
+                              `*Fasiliti Dipohon:* ${dataBorang.produk}%0A` +
+                              `*Butiran (Tarikh/Masa/Tujuan):* ${dataBorang.mesej}`;
+
+            const urlWhatsApp = `https://wa.me/${nomborTelefon}?text=${teksMesej}`;
+            window.open(urlWhatsApp, '_blank');
+
+            butang.disabled = false;
+            butang.innerText = "Sila Tunggu & Hantar Permohonan ke WhatsApp...";
+        }
+    </script>
+
+</body>
+</html>
